@@ -70,13 +70,13 @@ const PostCard = (props) => {
 };
 
 PostCard.defaultProps = {
-  publisher: "ACCIA",
+  publisher: "Publisher",
   publishDate: "Mar 25, 2022",
   content:
-    "Sunt mollit qui ipsum pariatur labore adipisicing eu officia proident excepteur consequat cupidatat. ",
+    "le description de publicationt doint saisir ici",
   thumbnail: "images/img_image22.png",
   readMoreButtonContent: "Voir plus",
-  views: "500",
+  views: "220",
 };
 
 export default PostCard;

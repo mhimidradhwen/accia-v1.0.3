@@ -1,11 +1,11 @@
 import React from "react";
 
-import { Img, Input } from "components";
+import { Button, Img, Input } from "components";
 
-const SearchBar = (props) => {
+const SearchBar = () => {
   return (
     <>
-      <div className={props.className}>
+      <div className="flex md:flex-col flex-row font-manrope md:gap-5 items-center justify-center max-w-[1099px] mt-[41px] mx-auto md:px-5 w-full">
         <Input
           name="rechercherCounter"
           placeholder="Rechercher ..."
@@ -17,13 +17,15 @@ const SearchBar = (props) => {
           variant="fill"
         ></Input>
         <div className="bg-light_blue-900 flex flex-col items-center justify-start p-2.5 rounded-br rounded-tr w-[17%] md:w-full">
-          <Img className="h-4 w-4" src="images/img_search.svg" alt="search" />
+          <Button   className="common-pointer cursor-pointer font-manrope min-w-[134px] text-center text-xs"
+              shape="round"
+              color="light_blue_900"
+              variant="fill">Search</Button>
         </div>
       </div>
     </>
   );
 };
 
-SearchBar.defaultProps = {};
 
 export default SearchBar;

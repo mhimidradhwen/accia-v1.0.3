@@ -6,8 +6,8 @@ const UserComments = (props) => {
   return (
     <>
       <div className={props.className}>
-        <div className="flex md:flex-col flex-row gap-3 items-start justify-between w-full">
-          <div className="bg-light_blue-100 flex flex-col h-9 items-center justify-start mb-[90px] rounded-[50%] w-9">
+        <div className="flex md:flex-col flex-row gap-2 items-start justify-between w-full">
+          <div className="bg-light_blue-100 flex flex-col h-9 items-center justify-start mb-2 rounded-[50%] w-9">
             <Img
               className="h-9 md:h-auto rounded-[50%] w-9"
               alt="rectangle_Two"

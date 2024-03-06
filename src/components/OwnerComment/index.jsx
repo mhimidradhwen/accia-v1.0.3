@@ -5,8 +5,7 @@ import { Img, Input, Text } from "components";
 const OwnerComment = (props) => {
   return (
     <>
-      <div className={props.className}>
-        <div className="flex flex-col justify-start mb-[33px] w-full">
+        <div className="flex flex-col justify-start mb-[33px] gap-4 w-full">
           <div className="flex flex-row gap-3 items-start justify-start w-[17%] md:w-full">
             <div className="bg-light_blue-100 flex flex-col h-9 items-center justify-start rounded-[50%] w-9">
               <Img
@@ -41,7 +40,6 @@ const OwnerComment = (props) => {
             variant="fill"
           ></Input>
         </div>
-      </div>
     </>
   );
 };

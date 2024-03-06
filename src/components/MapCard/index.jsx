@@ -2,41 +2,17 @@ import React from "react";
 
 import { Img } from "components";
 
-const MapCard = (props) => {
+const MapCard = () => {
   return (
     <>
-      <div
-        className={props.className}
-        style={{ backgroundImage: "url('images/img_group14.svg')" }}
-      >
-        <div className="flex md:flex-col flex-row md:gap-5 items-start justify-start md:ml-[0] ml-[147px] mt-0.5 w-[66%] md:w-full">
-          <div className="bg-white-A700 border border-gray-500 border-solid flex flex-col items-center justify-start mb-[102px] md:mt-0 mt-[70px] p-2.5 rounded-[18px] w-[13%] md:w-full">
-            <Img className="h-4 w-4" src="images/img_cart.svg" alt="cart" />
-          </div>
-          <div className="bg-light_blue-900 flex flex-col items-center justify-start mb-[93px] md:ml-[0] ml-[252px] md:mt-0 mt-[71px] p-3 rounded-[22px] w-[16%] md:w-full">
-            <Img
-              className="h-5 w-5"
-              src="images/img_locationon.svg"
-              alt="locationon"
-            />
-          </div>
-          <div className="flex flex-col md:gap-10 gap-[136px] justify-start md:ml-[0] ml-[142px] w-[17%] md:w-full">
-            <div className="bg-white-A700 border border-gray-500 border-solid flex flex-col items-center justify-start md:ml-[0] ml-[29px] p-2.5 rounded-[18px] shadow-bs2 w-[76%] md:w-full">
-              <Img
-                className="h-4 w-4"
-                src="images/img_cart.svg"
-                alt="cart_One"
-              />
-            </div>
-            <div className="bg-white-A700 border border-gray-500 border-solid flex flex-col items-center justify-start mr-[29px] p-2.5 rounded-[18px] shadow-bs2 w-[76%] md:w-full">
-              <Img
-                className="h-4 w-4"
-                src="images/img_home_gray_500.svg"
-                alt="home"
-              />
-            </div>
-          </div>
-        </div>
+      <div className="bg-cover bg-no-repeat flex flex-col h-80 items-start justify-end p-[55px] md:px-5 w-[89%] md:w-full">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3194.689804446056!2d10.180973310298974!3d36.801987067484845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd351ed037a72b%3A0x3bd12ba049f7690e!2sassocation%20ACCIA!5e0!3m2!1sen!2stn!4v1709677069278!5m2!1sen!2stn"
+          allowfullscreen=""
+          className="w-full h-[1500px]"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </>
   );

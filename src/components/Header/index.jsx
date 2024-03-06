@@ -3,6 +3,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import { Img, Text } from "components";
+import Navbar from "components/Navbar";
 
 const Header = (props) => {
   const navigate = useNavigate();
@@ -47,6 +48,7 @@ const Header = (props) => {
           alt="circle091"
           onClick={() => navigate("/profilepage")}
         />
+
       </header>
     </>
   );

@@ -6,8 +6,8 @@ const RapportCard = (props) => {
   return (
     <>
       <div className={props.className}>
-        <div className="flex flex-col items-start justify-start mb-[7px] w-[90%] md:w-full">
-          <div className="flex flex-row gap-2 items-start justify-start w-[74%] md:w-full">
+        <div className="flex flex-col items-start justify-start mb-[7px] w-full md:w-full">
+          <div className="flex flex-row gap-2 items-start justify-start w-full md:w-full">
             <Img
               className="h-[26px] w-[26px]"
               alt="filepdfTwo"
@@ -20,28 +20,35 @@ const RapportCard = (props) => {
               {props?.rapportTitle}
             </Text>
           </div>
+          <div>
           <Img
             className="h-[212px] md:h-auto mt-[15px] object-cover rounded-[3px] w-full"
             alt="imageThirtyFour"
             src={props?.rapportImage}
           />
-          <div className="flex flex-row items-center justify-start mt-[7px] w-full">
-            <Text
+          </div>
+        
+          <div className=" grid grid-cols-2 items-center justify-start w-full mt-2">
+           <div>
+           <Text
               className="text-light_blue-900_9e text-xs"
               size="txtLexendRegular12"
             >
               {props?.publishDate}
             </Text>
-            <Img
-              className="h-9 ml-[88px] rounded w-9"
+           </div>
+           <div className="flex flex-row gap-2 items-center">
+           <Img
+              className="h-9 rounded w-9"
               src="images/img_button42.svg"
               alt="buttonFortyTwo"
             />
             <Img
-              className="h-9 ml-[9px] rounded w-9"
+              className="h-9 rounded w-9"
               src="images/img_download.svg"
               alt="download"
             />
+           </div>
           </div>
         </div>
       </div>

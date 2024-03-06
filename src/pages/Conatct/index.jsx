@@ -7,6 +7,8 @@ import InputField from "components/InputField";
 import InputMessageFiels from "components/InputMessageFiels";
 import MapCard from "components/MapCard";
 import Navbar from "components/Navbar";
+import PageTitle from "components/PageTitle";
+import ReturnButton from "components/ReturnButton";
 
 const textboxEightOptionsList = [
   { label: "Option1", value: "option1" },
@@ -33,17 +35,8 @@ const ConatctPage = () => {
   return (
     <>
       <div className="bg-white-A700 flex flex-col justify-start mx-auto shadow-bs3 w-full">
-        <div className="flex flex-col font-lexend items-center w-full">
-          <Header className="bg-gray-300 flex md:flex-col flex-row md:gap-5 items-center justify-center md:px-5 shadow-bs1 w-full" />
-          <Navbar className="font-manrope h-[107px] md:h-[281px] md:px-5 relative w-full" />
-        </div>
-        <Text
-          className="md:ml-[0] ml-[206px] mt-[93px] sm:text-[38px] md:text-[44px] text-[52px] text-blue_gray-900"
-          size="txtLexendBold52"
-        >
-          Contacter Nous
-        </Text>
-        <Line className="bg-light_blue-900 h-[3px] md:ml-[0] ml-[210px] mr-[1111px] mt-0.5 w-[9%]" />
+        <PageTitle title="Contactez Nous" />
+
         <div className="flex flex-col font-manrope gap-9 items-end mt-16 md:px-10 px-12 sm:px-5 w-full">
           <div className="bg-gray-50 flex flex-col items-start justify-start p-4 md:px-5 rounded-lg w-[89%] md:w-full">
             <div className="flex flex-col gap-3 justify-start mb-[22px] mt-0.5 w-[95%] md:w-full">
@@ -109,13 +102,12 @@ const ConatctPage = () => {
                   {inputFieldPropList.map((props, index) => (
                     <React.Fragment key={`InputField${index}`}>
                       <InputField
-                        className="bg-white-A700 flex flex-1 flex-col items-start justify-end outline outline-[1px] outline-gray-500 p-[11px] rounded w-full"
                         {...props}
                       />
                     </React.Fragment>
                   ))}
                 </div>
-                <InputMessageFiels className="bg-white-A700 flex flex-col md:gap-10 gap-[69px] justify-end outline outline-[1px] outline-gray-500 rounded w-full" />
+                <InputMessageFiels  />
               </div>
               <div className="flex flex-col items-center justify-start w-[11%] md:w-full">
                 <Button
@@ -137,36 +129,18 @@ const ConatctPage = () => {
             </div>
           </div>
         </div>
-        <Text
-          className="md:ml-[0] ml-[232px] mt-[49px] text-2xl md:text-[22px] text-light_blue-900 sm:text-xl"
-          size="txtManropeBold24"
-        >
-          Visiter ACCIA
-        </Text>
-        <div className="flex flex-col font-manrope gap-10 items-end mt-[19px] md:px-10 px-12 sm:px-5 w-full">
-          <MapCard
-            className="bg-cover bg-no-repeat flex flex-col h-80 items-start justify-end p-[55px] md:px-5 w-[89%] md:w-full"
-            style={{ backgroundImage: "url('images/img_group14.svg')" }}
-          />
-          <Button
-            className="cursor-pointer flex items-center justify-center min-w-[109px] mr-1.5 rounded"
-            leftIcon={
-              <Img
-                className="h-5 mr-1.5 my-px"
-                src="images/img_arrowdown.svg"
-                alt="arrow_down"
-              />
-            }
-            shape="round"
-            color="light_blue_50"
-            size="md"
-            variant="fill"
+
+        <div className="grid gird-rows-2 ">
+          <Text
+            className=" ml-[232px] mt-2 text-2xl md:text-[22px] text-light_blue-900 sm:text-xl"
+            size="txtManropeBold24"
           >
-            <div className="text-base text-left">Retour</div>
-          </Button>
-        </div>
-        <div className="flex flex-col items-center mt-[43px] w-full">
-          <Footer className="bg-gray-300 flex items-center justify-center md:px-5 w-full" />
+            Visiter ACCIA
+          </Text>
+          <div className="flex flex-col font-manrope items-end mt-2 md:px-10 px-12 sm:px-5 w-full">
+            <MapCard />
+          </div>
+     <ReturnButton />
         </div>
       </div>
     </>

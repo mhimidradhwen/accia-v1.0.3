@@ -1,23 +1,19 @@
 import React from "react";
 
-import { Line, Text } from "components";
+import { Text } from "components";
 
-const PageTitle = (props) => {
+const PageTitle = ({title}) => {
   return (
-    <>
-      <div className={props.className}>
-        <Text
-          className="absolute h-max inset-[0] justify-center sm:text-[38px] md:text-[44px] text-[52px] text-blue_gray-900 w-max"
-          size="txtLexendBold52"
-        >
-          {props?.title}{" "}
-        </Text>
-        <Line className="absolute bg-light_blue-900 bottom-[0] h-[3px] left-[1%] mb-[px] w-[23%]" />
-      </div>
-    </>
+      <Text
+        className="flex font-manrope  max-w-[1099px] mt-6 mx-auto md:px-5 w-full text-teal-900 text-2xl"
+        size="txtLexendSemiBold14"
+      >
+        {title}
+      </Text>
+    
   );
 };
 
-PageTitle.defaultProps = {title:"Titre de Page"};
+PageTitle.defaultProps = { title: "Titre de Page" };
 
 export default PageTitle;
